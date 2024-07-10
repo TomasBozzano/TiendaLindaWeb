@@ -1,0 +1,21 @@
+---
+ const nav = [
+    { name: 'Inicio', href: '/' },
+    { name: 'Productos', href: '/#productos' },
+    { name: 'Nosotras', href: '/#nosotras' },
+    { name: 'Contacto', href: '/#contacto' },
+  ]
+  nav.forEach
+---
+
+<header class="flex items-center justify-center w-full mx-auto mt-2">
+    <nav class="flex px-3 text-sm font-medium rounded-full text-gray-400 justify-center items-center">
+        {
+            nav.map(link => (
+                <a href={link.href} class="p-4 hover:text-green-300">
+                    {link.name}
+                </a>
+            ))
+        }
+    </nav>
+</header>
