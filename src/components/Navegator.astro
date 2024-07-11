@@ -5,11 +5,10 @@
     { name: 'Nosotras', href: '/#nosotras' },
     { name: 'Contacto', href: '/#contacto' },
   ]
-  nav.forEach
 ---
-
-<header class="flex items-center justify-center w-full mx-auto mt-2">
-    <nav class="flex px-3 text-sm font-medium rounded-full text-gray-400 justify-center items-center">
+<section>
+<header class="flex items-center justify-center w-full mx-auto mt-2 fixed z-10 top-0">
+    <nav class="bg-white flex px-3 text-sm font-medium rounded-full text-gray-400 justify-center items-center">
         {
             nav.map(link => (
                 <a href={link.href} class="p-4 hover:text-green-300">
@@ -19,3 +18,17 @@
         }
     </nav>
 </header>
+</section>
+<style>
+    nav {
+        animation: nav-shadown 1s linear both;
+        animation-timeline: scroll();
+        animation-range: 0 100px;
+    }
+
+    @keyframes nav-shadown {
+        to {
+            @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+        }
+    }
+</style>
