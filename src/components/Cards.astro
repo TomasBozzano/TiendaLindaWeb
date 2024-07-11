@@ -1,0 +1,54 @@
+---
+const Products = [
+    {
+        name: "Conjuntos",
+        marca: "Marcela Koury",
+        img: "https://marcelakoury.com/9757-thickbox_default/conjunto-push-up-y-colaless-millie.jpg",
+    },
+    {
+        name: "Bombachas",
+        marca: "Marcela Koury",
+        img: "https://marcelakoury.com/9916-thickbox_default/conjunto-bralette-y-tangaless-sofi-mes-mk.jpg",
+    },
+    {
+        name: "Corpiños",
+        marca: "Marcela Koury",
+        img: "https://marcelakoury.com/7823-thickbox_default/conjunto-con-aro-y-tangaless-lea.jpg",
+    },
+    {
+        name: "Conjuntos",
+        marca: "Sigry",
+        img: "https://www.sigry.com.ar/img/art_1420.jpg",
+    },
+    {
+        name: "Body's",
+        marca: "Kaury",
+        img: "https://www.kaury.com/wp-content/uploads/art-8172-kau74778-copia.jpg",
+    }
+];
+---
+
+<article class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6 justify-center items-center">
+    {
+        Products.map((product) => (
+            <div class="border border-gray-400 rounded-xl">
+                <>
+                    <img
+                        src={product.img}
+                        class="w-96 h-50 rounded-xl"
+                        title="Ropa interior femenina"
+                    />
+                    <img />
+                </>
+                <div class="flex p-6">
+                    <div class="mb-8">
+                        <h2 class="text-rose-400 font-bold text-xl mb-2">
+                            {product.name}
+                        </h2>
+                        <p class="text-gray-700 text-base">{product.marca}</p>
+                    </div>
+                </div>
+            </div>
+        ))
+    }
+</article>
