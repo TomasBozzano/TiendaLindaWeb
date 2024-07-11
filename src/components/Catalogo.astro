@@ -1,6 +1,13 @@
-<section id="productos" class="flex justify-center items-center p-20">
-    <div class="text-gray-500">
-        <h1>Catálogo</h1>
-        <p>¡Bienvenido a nuestro catálogo!</p>
+---
+import Cards from "./Cards.astro";
+import Tshirt from "../components/img/T-shirt.astro";
+---
+
+<section id="productos" class="justify-center items-center p-20">
+    <div class="text-rose-400 flex justify-center items-center">
+        <h2 class="text-center flex justify-center items-center text-2xl gap-2 p-5">Nuestros Productos 
+            <Tshirt class="h-10 w-10" />
+        </h2>
     </div>
+        <Cards />
 </section>
